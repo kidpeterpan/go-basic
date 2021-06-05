@@ -27,6 +27,8 @@ func main() {
 
 	// this below code should be false because it always return new address from the getPointer function
 	fmt.Println("compare function return pointer getPointer == getPointer:", getPointer() == getPointer())
+	// go provide new() for allocate memory it work at the same getPointer() we wrote
+	fmt.Println("compare function return pointer new(int) == new(int):", new(int) == new(int))
 }
 
 func getPointer() *int {
