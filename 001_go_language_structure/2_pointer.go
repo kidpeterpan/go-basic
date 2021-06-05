@@ -24,4 +24,12 @@ func main() {
 	fmt.Println("y == x", y == x)
 	fmt.Println("value of y:",y)
 	fmt.Println("value of x:",x)
+
+	// this below code should be false because it always return new address from the getPointer function
+	fmt.Println("compare function return pointer getPointer == getPointer:", getPointer() == getPointer())
+}
+
+func getPointer() *int {
+	x := 5
+	return &x
 }
