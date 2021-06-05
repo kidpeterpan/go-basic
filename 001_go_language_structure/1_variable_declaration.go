@@ -17,7 +17,10 @@ func main() {
 	fmt.Printf("x is %T : %d\n", x, x)
 	fmt.Printf("y is %T : %d\n", y, y)
 
-	short := 5 // go infer type from the value we assigned
+	short := 5
+	// go infer type from the value we assigned
+	// short variable can not declare outside a function
+	// left of := at least one should be new value
 	fmt.Printf("short is %T : %d\n", short, short)
 
 	x,y = y, x // easy value swap
