@@ -4,9 +4,22 @@ import "fmt"
 
 func main() {
 	x := 2
+	var	interfaceX interface{}
+	interfaceX = 2
 	switchWithValue(x)
-
 	switchWithCondition(x)
+	switchWithType(interfaceX)
+}
+
+func switchWithType (x interface{}) {
+	switch x.(type) {
+	case int :
+		fmt.Println("x is int")
+	case string:
+		fmt.Println("x is string")
+	default:
+		fmt.Println("x is unknown")
+	}
 }
 
 func switchWithCondition(x int) {
