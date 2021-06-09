@@ -4,16 +4,16 @@ import "fmt"
 
 func main() {
 	x := 2
-	var	interfaceX interface{}
+	var interfaceX interface{}
 	interfaceX = 2
 	switchWithValue(x)
 	switchWithCondition(x)
 	switchWithType(interfaceX)
 }
 
-func switchWithType (x interface{}) {
+func switchWithType(x interface{}) {
 	switch x.(type) {
-	case int :
+	case int:
 		fmt.Println("x is int")
 	case string:
 		fmt.Println("x is string")

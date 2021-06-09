@@ -14,7 +14,7 @@ func main() {
 }
 
 func evenOrOdd(num int) string {
-	if num % 2 == 0 {
+	if num%2 == 0 {
 		return "even"
 	} else {
 		return "odd"

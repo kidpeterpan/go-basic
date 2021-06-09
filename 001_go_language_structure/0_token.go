@@ -12,5 +12,4 @@ func main() {
 
 	// ส่วน data type ดูได้จาก builtin/builtin.go
 
-
 }

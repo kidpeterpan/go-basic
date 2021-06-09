@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// ใน go มีแค่ for loop
-	for i:=0; i < 10; i++ {
+	for i := 0; i < 10; i++ {
 
 		if i == 3 {
 			fmt.Println("we no need 3")

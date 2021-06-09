@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for i:=0 ; i< 100; i++ {
-		fmt.Printf("%d is prime? -> %t\n",i,prime.IsPrime(i))
+	for i := 0; i < 100; i++ {
+		fmt.Printf("%d is prime? -> %t\n", i, prime.IsPrime(i))
 	}
 }
