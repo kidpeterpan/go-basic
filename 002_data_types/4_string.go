@@ -18,4 +18,18 @@ func main() {
 	fmt.Println(string(testByte[2])) // -
 	fmt.Println(string(testByte[3])) // à กลับไม่ใช่ ส แบบที่คาดหวัง
 
+	// unicode -> enable people around the world to use computers in any language https://unicodelookup.com/
+	fmt.Println(string(0xE2A)) // ส -> จะสังเกตุว่า testByte ของเราไม่มี 0xE2A เลย แล้วมันปริ้น ส ได้ไง
+
+	// แปลง unicode to UTF-8
+	// E2A ที่เป็น hex ถ้าเป็น binary จะได้ 111000101010
+	// จับเข้าสูตร range 12 ของ UTF-8 จะได้ 1110xxxx 10xxxxxx 10xxxxxx -> 11100000 10111000 10101010
+	// เสร็จแล้วแปลงกลับเป็น hex จะได้ E0 B8 AA
+
+	// ใน go ใช้ UTF-8
+	// จริงๆ แล้ว ส ก็คือ
+	fmt.Println("UTF-8:",string(testByte[3:6])) // e0, b8, aa -> ส
+
+	// ถ้าอยากได้ len ที่ถูกต้องของภาษาไทย แปลง string -> []rune{} ก่อน
+	fmt.Println(len([]rune(th)))
 }
