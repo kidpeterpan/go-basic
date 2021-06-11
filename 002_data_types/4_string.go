@@ -19,7 +19,7 @@ func main() {
 	fmt.Println(string(testByte[3])) // à กลับไม่ใช่ ส แบบที่คาดหวัง
 
 	// unicode -> enable people around the world to use computers in any language https://unicodelookup.com/
-	fmt.Println(string(0xE2A)) // ส -> จะสังเกตุว่า testByte ของเราไม่มี 0xE2A เลย แล้วมันปริ้น ส ได้ไง
+	fmt.Println(string(rune(0xE2A))) // ส -> จะสังเกตุว่า testByte ของเราไม่มี 0xE2A เลย แล้วมันปริ้น ส ได้ไง
 
 	// แปลง unicode to UTF-8
 	// E2A ที่เป็น hex ถ้าเป็น binary จะได้ 111000101010
