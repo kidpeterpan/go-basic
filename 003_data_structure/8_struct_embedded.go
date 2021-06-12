@@ -6,7 +6,7 @@ type People struct {
 	// note: หากต้องการ export field ให้ตั้งชื่อขึ้นต้นด้วยพิมพ์ใหญ่
 	name string
 	age int
-	Address // anonymouse field
+	Address // anonymous field
 }
 
 type Address struct {
