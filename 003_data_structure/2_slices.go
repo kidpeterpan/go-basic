@@ -11,7 +11,7 @@ func main() {
 		"mango",
 	}
 	sliceFruits := fruits[1:4]
-	fmt.Println(sliceFruits) // [orange mango]
+	fmt.Println(sliceFruits) // [banana papaya orange]
 	fmt.Println(len(sliceFruits)) // 3
 	fmt.Println(cap(sliceFruits)) // 4
 
