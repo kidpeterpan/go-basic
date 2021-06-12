@@ -4,12 +4,12 @@ import "fmt"
 
 type Person struct {
 	name string
-	age int
+	age  int
 }
 
 func main() {
 	// member ของ struct มี type ที่แตกต่างกันได้เช่น
-	deku := Person{ name: "deku", age: 14}	
+	deku := Person{name: "deku", age: 14}
 	fmt.Println(deku.name)
 	fmt.Println(deku.age)
 	fmt.Printf("\n")
@@ -17,10 +17,10 @@ func main() {
 	// ประกาศ struct แบบ literal
 	uraraka := struct {
 		name string
-		age int 
+		age  int
 	}{
 		name: "uraraka",
-		age: 14,
+		age:  14,
 	}
 	fmt.Println(uraraka.name)
 	fmt.Println(uraraka.age)
