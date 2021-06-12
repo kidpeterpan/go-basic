@@ -26,18 +26,18 @@ func main() {
 
 	copyFruits := fruits
 	copyFruits[0] = "microsoft"
-	fmt.Println(fruits[0]) // still be apple
+	fmt.Println(fruits[0])     // still be apple
 	fmt.Println(copyFruits[0]) // microsoft
 	// แล้วถ้าเราอยาก share ล่ะ
 	pointerFruits := &fruits
 	pointerFruits[0] = "amazon"
 	fmt.Println(pointerFruits[0]) // should be amazon
-	fmt.Println(fruits[0]) // should be amazon
+	fmt.Println(fruits[0])        // should be amazon
 
 	// note - ***ส่วนมากเราใช้ slice มากกว่า***
-	
+
 	// การประกาศ arrays แบบ ellisps
-	cars := [...]string{2:"toyota",0:"honda",1:"benz"} // ใส่เพิ่มได้เรื่อยๆ กำหนด index ด้วย :
+	cars := [...]string{2: "toyota", 0: "honda", 1: "benz"} // ใส่เพิ่มได้เรื่อยๆ กำหนด index ด้วย :
 	fmt.Println(len(cars))
 	fmt.Println(cars[0]) // should be "honda"
 	cars2 := cars
@@ -46,10 +46,10 @@ func main() {
 	cars3[0] = "toyota"
 	cars3[2] = "honda"
 	fmt.Println("cars == cars3", cars == cars3) // invalid order should be false
-	
+
 	// like other language go has multi dimensional
 	arr2d := [2][2]int{}
-	arr2d[0][0] = 1 
+	arr2d[0][0] = 1
 	fmt.Println(arr2d)
 
 }

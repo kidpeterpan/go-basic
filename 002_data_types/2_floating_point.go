@@ -12,9 +12,9 @@ func main() {
 
 	var f float64
 	fmt.Println(f)
-	fmt.Println(f/0) // NaN (not a number) maybe 0.0000000000000000001/0
-	fmt.Println(1/f) // Inf (Infinity) maybe 1/0.00000000000000001
+	fmt.Println(f / 0) // NaN (not a number) maybe 0.0000000000000000001/0
+	fmt.Println(1 / f) // Inf (Infinity) maybe 1/0.00000000000000001
 
 	f = 3.2
-	fmt.Printf("f is %.2f\n",f)
+	fmt.Printf("f is %.2f\n", f)
 }

@@ -35,5 +35,5 @@ func main() {
 	)
 	// ถ้าเราใส่แค่ Mon = 1 มันจะ copy ค่าทุกตัวจะเท่ากับ 1
 	// ดังนั้น iota จะมาช่วยเรา, iota คือ constant generator
-	fmt.Println(Mon,Tu,Wed,Thu,Fri,Sat,Sun) // 0 1 2 3 4 5 6
+	fmt.Println(Mon, Tu, Wed, Thu, Fri, Sat, Sun) // 0 1 2 3 4 5 6
 }

@@ -10,13 +10,15 @@ func main() {
 		"orange",
 		"mango",
 	}
+
+	// สร้าง slice จาก arrays
 	sliceFruits := fruits[1:4]
-	fmt.Println(sliceFruits) // [banana papaya orange]
+	fmt.Println(sliceFruits)      // [banana papaya orange]
 	fmt.Println(len(sliceFruits)) // 3
 	fmt.Println(cap(sliceFruits)) // 4
 
 	refSliceFruits := sliceFruits
 	refSliceFruits[0] = "super orange"
 	fmt.Println(refSliceFruits[0]) // "super orange"
-	fmt.Println(sliceFruits[0]) // "super orange" ถูกเปลี่ยนด้วยเพราะเป็น ref mem address ที่เดียวกัน
+	fmt.Println(sliceFruits[0])    // "super orange" ถูกเปลี่ยนด้วยเพราะเป็น ref mem address ที่เดียวกัน
 }

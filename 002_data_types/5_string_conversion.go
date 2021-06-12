@@ -12,12 +12,12 @@ func main() {
 	fmt.Println("\xe2\x99\x9e" == ex1)
 
 	fmt.Println("EX2: []byte -> string")
-	ex2 := []byte{0xe2,0x99,0x9e}
+	ex2 := []byte{0xe2, 0x99, 0x9e}
 	ex2String := string(ex2)
 	fmt.Println(ex2String) // --> ♞
 
 	fmt.Println("EX3: []rune -> string")
-	ex3 := []rune{0xe0,0xb8,0xaa}
+	ex3 := []rune{0xe0, 0xb8, 0xaa}
 	fmt.Println(string(ex3))
 
 	fmt.Println("EX4: string -> []byte")
