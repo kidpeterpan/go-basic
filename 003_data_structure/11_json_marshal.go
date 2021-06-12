@@ -9,7 +9,7 @@ type Todo2 struct {
 	UserId    int    `json:"userId"`
 	Id        int    `json:"id"`
 	Title     string `json:"title,omitempty"`
-	Completed *bool   `json:"completed,omitempty"` // เราต้องการให้ show true/false ได้อย่างถูกต้อง
+	Completed *bool  `json:"completed,omitempty"` // เราต้องการให้ show true/false ได้อย่างถูกต้อง
 }
 
 func main() {

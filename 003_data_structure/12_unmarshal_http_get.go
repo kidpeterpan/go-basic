@@ -34,7 +34,7 @@ func main() {
 	}
 
 	todos := Todos{}
-	err = json.Unmarshal(respBd,&todos)
+	err = json.Unmarshal(respBd, &todos)
 	if err != nil {
 		fmt.Println("can not unmarshal todos:", err)
 		return
