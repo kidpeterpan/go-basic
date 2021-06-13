@@ -23,7 +23,7 @@ func getBalance() (int, error) {
 }
 
 func waitForDb() error {
-	for i:=0; i< 3; i++ {
+	for i := 0; i < 3; i++ {
 		err := connectToDB(i)
 		if err != nil {
 			return fmt.Errorf("waitForDB: %v", err)
@@ -63,3 +63,8 @@ func main() {
 	}
 	fmt.Println("I got my money from bank:", money)
 }
+
+// note: เรื่องของ error จะต้องเอาไปจับกับ concept ต่างๆ เพิ่มเติมเช่น
+// - stop program gracefully -> ถ้า error เราควร clear resource ให้อยู่ stat ที่ไม่สร้างความเสียหาย
+// - reduce functionality -> fallback ไปใช้อะไรสักอย่างแทนได้ไหม?
+// - ignore error -> บางอย่างไม่ได้สำคัญ อาจจะไม่ต้อง return error แค่ log ก็พอ
