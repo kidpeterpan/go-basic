@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+    {{ range .}}
+        <div>
+            {{ .UserId }}
+            {{ .Id }}
+            {{ .Title }}
+            {{ .Completed }}
+        </div>
+    {{ end }}
+</body>
+</html>
