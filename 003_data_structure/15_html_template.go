@@ -3,18 +3,18 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"html/template"
 	"io/ioutil"
 	"net/http"
-	"html/template"
 	"os"
 )
 
 // note: ***html/template ช่วยเรา escape html script ให้เรา***
 
 type TodoModel struct {
-	UserId int
-	Id int
-	Title string
+	UserId    int
+	Id        int
+	Title     string
 	Completed bool
 }
 
