@@ -4,16 +4,41 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"time"
 )
 
-const isDBReady = true
+const isDBReady = false // change this to false to see error
 const balance = 2000
+const dbRetryTimes = 2
+const withdrawAmount = 2000 // withdrawAmount > balance also error
 
 func getBalance() (int, error) {
 	if !isDBReady {
-		return 0, errors.New("getBalance: database is down")
+		err := waitForDb()
+		if err != nil {
+			return 0, fmt.Errorf("getBalance: database is down : %v", err)
+		}
 	}
 	return balance, nil
+}
+
+func waitForDb() error {
+	for i:=0; i< 3; i++ {
+		err := connectToDB(i)
+		if err != nil {
+			return fmt.Errorf("waitForDB: %v", err)
+		}
+		time.Sleep(time.Second)
+	}
+	return nil
+}
+
+func connectToDB(time int) error {
+	if time == dbRetryTimes {
+		return errors.New("connectToDB: maximum retry exceed")
+	}
+	log.Println("connecting to DB...")
+	return nil
 }
 
 // withdraw is example error propagation func
@@ -31,7 +56,7 @@ func withdraw(amount int) (int, error) {
 func main() {
 	// note: error ใน go เป็นแค่ค่าๆ นึง
 	// scenario: actor -> bank application -> database
-	money, err := withdraw(2001)
+	money, err := withdraw(withdrawAmount)
 	if err != nil {
 		log.Fatal("main: ", err)
 		return
