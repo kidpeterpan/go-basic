@@ -15,9 +15,9 @@ func main() {
 }
 
 // Fn = Fn - 1 + Fn -2 for n > 1
-func Fn(n int) int  {
+func Fn(n int) int {
 	if n <= 1 {
 		return n
 	}
-	return Fn(n- 1) + Fn(n- 2)
+	return Fn(n-1) + Fn(n-2)
 }
