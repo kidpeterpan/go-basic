@@ -13,4 +13,6 @@ func variadicFunc(characters ...string){
 
 func main() {
 	variadicFunc("a","b","c")
+	slStr := []string{"a","b","c"}
+	variadicFunc(slStr...) // a b c
 }
