@@ -2,21 +2,21 @@ package main
 
 import "fmt"
 
-type Point struct {
+type point struct {
 	x int
 	y int
 }
 
-func (p *Point) X() int {
+func (p *point) X() int {
 	return p.x
 }
 
-func (p *Point) SetX(x int) {
+func (p *point) SetX(x int) {
 	p.x = x
 }
 
 func main() {
-	var p Point
+	var p point
 	fmt.Println(p) // x 0, y 0
 	p.SetX(10)
 	fmt.Println(p.X()) // 10
