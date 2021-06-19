@@ -1,16 +1,41 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
-type PersonForSort struct {
+type PersonForSort []struct {
 	name string
 	age  int
 }
 
+//type Interface interface {
+//	// Len is the number of elements in the collection.
+//	Len() int
+//	// Less reports whether the element with
+//	// index i should sort before the element with index j.
+//	Less(i, j int) bool
+//	// Swap swaps the elements with indexes i and j.
+//	Swap(i, j int)
+//}
+
+func (pfs PersonForSort) Len() int {
+	return len(pfs)
+}
+
+func (pfs PersonForSort) Less(i, j int) bool {
+	return pfs[i].name < pfs[j].name
+}
+
+func (pfs PersonForSort) Swap(i, j int) {
+	pfs[i], pfs[j] = pfs[j], pfs[i]
+}
+
 func main() {
 	// sort Person by name
-	// input is []*Person
-	pfs := []*PersonForSort{
+	// input is []Person
+	pfs := PersonForSort{
 		{name: "A", age: 11},
 		{name: "A", age: 20},
 		{name: "A", age: 10},
@@ -28,4 +53,6 @@ func main() {
 	}
 	// implement interface sort.Interface and use sort.Sort
 	fmt.Println("sorted ===")
+	sort.Sort(&pfs)
+	fmt.Println(pfs)
 }
