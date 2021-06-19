@@ -8,14 +8,14 @@ func main() {
 	var w weapon
 	// call attack!
 	// interface ก็มีการ embedded ได้เหมือนกัน (add interface Item { cost() }
-	w = &sword{ name: "ice sword" }
+	w = &sword{name: "ice sword"}
 	printAttack(w)
-	w = &bow{ name: "fire bow" }
+	w = &bow{name: "fire bow"}
 	printAttack(w)
 }
 
 func printAttack(w weapon) {
-	fmt.Printf("attack: %s, cost: %d\n",w.attack(), w.cost())
+	fmt.Printf("attack: %s, cost: %d\n", w.attack(), w.cost())
 }
 
 type item interface {
@@ -32,7 +32,7 @@ type sword struct {
 }
 
 func (s *sword) attack() string {
-	return fmt.Sprintf("attack with: %s",s.name)
+	return fmt.Sprintf("attack with: %s", s.name)
 }
 
 func (s *sword) cost() int {
@@ -44,11 +44,9 @@ type bow struct {
 }
 
 func (b *bow) attack() string {
-	return fmt.Sprintf("attack with: %s",b.name)
+	return fmt.Sprintf("attack with: %s", b.name)
 }
 
 func (b *bow) cost() int {
 	return 12
 }
-
-
