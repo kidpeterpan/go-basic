@@ -70,4 +70,7 @@ func main() {
 	fmt.Println(peepeeAsProg.Detail())
 	fmt.Println(feefeeAsTester.Detail())
 	fmt.Println(peepeeAsProg.IsSameOffice(&feefeeAsTester.Employee))
+
+	isSameOffice := (*Employee).IsSameOffice // extract method ของ Employee มาใช้ก็ทำได้
+	fmt.Println(isSameOffice(&peepee,&feefee))  // param1 -> receiver, param2 -> method param
 }
