@@ -53,6 +53,6 @@ func main() {
 	}
 	// implement interface sort.Interface and use sort.Sort
 	fmt.Println("sorted ===")
-	sort.Sort(&pfs)
+	sort.Sort(pfs)
 	fmt.Println(pfs)
 }
